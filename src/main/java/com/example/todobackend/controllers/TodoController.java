@@ -9,6 +9,7 @@ import java.util.List;
 
 
 @RestController
+@RequestMapping("/todo")
 public class TodoController {
 
     private final TodoRepository todoRepository;
@@ -23,22 +24,22 @@ public class TodoController {
         this.todoRepository = todoRepository;
     }
 
-    @GetMapping("/todo")
+    @GetMapping
     public List<Todo> getTodos() {
         return this.todoRepository.findAll();
     }
 
-    @GetMapping("/todo/{id}")
+    @GetMapping("/{id}")
     public Todo getTodo(@PathVariable("id") String id) {
         return this.todoRepository.findById(id).get();
     }
 
-    @PostMapping("/todo")
+    @PostMapping
     public Todo saveTodo(@RequestBody Todo todo){
         return this.todoRepository.save(todo);
     }
 
-    @DeleteMapping("/todo/delete/{id}")
+    @DeleteMapping("/{id}")
     public void deleteTodo(@PathVariable("id") String id) {
         this.todoRepository.deleteById(id);
     }
