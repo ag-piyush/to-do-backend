@@ -12,11 +12,5 @@ public class Todo {
     @Id
     private String id;
     private String text;
-    private boolean complete;
+    private boolean completed;
 }
-
-/*
-  id ->
-  text ->
-  complete ->
- */

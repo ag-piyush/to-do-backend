@@ -14,13 +14,8 @@ public class TodoController {
 
     private final TodoRepository todoRepository;
 
-    /*
-        class TodoRepositoryImpl implement TodoRepository
-        TodoRepository tR = new TodoRepositoryImpl();
-     */
-
     @Autowired
-    public TodoController(TodoRepository todoRepository){
+    public TodoController(TodoRepository todoRepository) {
         this.todoRepository = todoRepository;
     }
 
@@ -35,7 +30,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public Todo saveTodo(@RequestBody Todo todo){
+    public Todo saveTodo(@RequestBody Todo todo) {
         return this.todoRepository.save(todo);
     }
 
@@ -44,31 +39,3 @@ public class TodoController {
         this.todoRepository.deleteById(id);
     }
 }
-/* post mapping me path variable
-/*
-    todoapplication.io    /todo    /5
-    todoapplication.io    /user
-    baseUrl ^
-
- */
-
-
-/*
-            /*
-    req -> url
-    req -> headers
-    req -> parameters
-
-    res -> data
-    res -> code
-    res -> header
- */
-
-/*
-    class -> starts with capital
-    object/attribute name -> starts with small
-    package ->
-    starts with small, try to make it one word only
-     (model, string, functions) (todoString -> todo ke inside string)
-    camelCase
- */

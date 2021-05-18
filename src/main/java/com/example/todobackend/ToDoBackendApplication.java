@@ -12,18 +12,3 @@ public class ToDoBackendApplication {
 
 }
 
-/*
-    Model --- View --- Controller
-    Data  ---  UI  --- API
-
-Req:    View ---> Controller ---> Model
-Res:         <---            <---
-
-
-    HTTP Call -> GET, POST, PUT, PATCH, DELETE
-    www.facebook.com/ -> API
-
-    Controller(APIs) -> GET -> Data
-    Controller -->    Service         --> Repository(DB-accesible-layer)
-    (Req/Res)         (Bus. Logic)       (DB-accesible-layer)
- */
